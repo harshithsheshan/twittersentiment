@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+ <html class="no-js">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>twitter sentiment analysis</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
+
+
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Superfish -->
+	<link rel="stylesheet" href="css/superfish.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+
+	</head>
+	<body>
+		<div id="fh5co-wrapper">
+		<div id="fh5co-page">
+
+		<div class="fh5co-hero">
+			<div class="fh5co-overlay"></div>
+			<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/bg.png);">
+				<div class="desc">
+					<div class="container">
+						<div class="col-md-10 col-md-offset-1">
+							<a href="index.html" id="main-logo"><b>NLP</b></a>
+							<div class="animate-box">
+								<h2>twiter Sentiment Analysis(TWS)</h2>
+								<p>based on Python 2.7</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<header id="fh5co-header-section" class="sticky-banner">
+			<div class="container">
+				<div class="nav-header">
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+					<h1 id="fh5co-logo"><a href="index.html">TWS</a></h1>
+					<!-- START #fh5co-menu-wrap -->
+					<nav id="fh5co-menu-wrap" role="navigation">
+						<ul class="sf-menu" id="fh5co-primary-menu">
+							<li class="active"><a href="index.html">Home</a></li>
+							<li>
+								<a class="fh5co-sub-ddown">Downloads</a>
+								<ul class="fh5co-sub-menu">
+									<li><a href="https://www.python.org/downloads/release/python-2715/">Python 2.7</a></li>
+									<li><a href="https://neo4j.com/download/">Neo4j Desktop </a></li>
+									<li><a href="https://www.jetbrains.com/pycharm/download/#section=mac">Python IDE (Pycharm)</a></li>
+							</li>
+							<!--<li><a href="about.html">About</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="contact.html">Contact</a></li>
+            -->
+            </ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<!-- end:header-top -->
+
+
+		<div id="fh5co-feature-product" class="fh5co-section-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+						<h3>What is NLP?</h3>
+						<p>Natural language processing (NLP) is an area of computer science and artificial intelligence concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyze large amounts of natural language data.</p>
+					</div>
+				</div>
+
+
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-4">
+						<div class="feature-text">
+							<h3>What are we processing?</h3>
+							<p>Twitter (/ˈtwɪtər/) is an online news and social networking service on which users post and interact with messages known as "tweets". </p>
+							<p>tweets is our area of interest and also acts as our database</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="feature-text">
+							<h3>What is happening?</h3>
+							<p>We are performing a sentiment analysis on the tweets to determine if a tweet is Positive, Negative or Neutral.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="feature-text">
+							<h3>What do we do with the result?</h3>
+							<p>We are loading these tweets on to our graph database. We are using Neo4j and this data can be accesed using Cypher queries from the browser or can export the database in other formats.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<b> What is NLP (video)</b>
+            <p><iframe width="352" height="198" src="https://www.youtube.com/embed/4kyJVwew0lg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="fh5co-features">
+			<div class="container">
+				<h2> What packages we use ?</h2>
+				<p>Advantage of working with python and its community is that we get lot of support and help from the packages available online which are open source.</p>
+				<div class="row">
+					<div class="col-md-4">
+
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-hotairballoon"></i>
+							</span>
+							<div class="feature-copy">
+								<h3>NLTK</h3>
+								<p>NLTK is a leading platform for building Python programs to work with human language data. It provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning, wrappers for industrial-strength NLP libraries, and an active discussion forum.</p>
+								<p><a href="https://www.nltk.org/">Learn More</a></p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-md-4">
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-search"></i>
+							</span>
+							<div class="feature-copy">
+								<h3>textblob</h3>
+								<p>TextBlob is a Python (2 and 3) library for processing textual data. It provides a simple API for diving into common natural language processing (NLP) tasks such as part-of-speech tagging, noun phrase extraction, sentiment analysis, classification, translation, and more.</p>
+								<p><a href="https://textblob.readthedocs.io/en/dev/">Learn More</a></p>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-4">
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-wallet"></i>
+							</span>
+							<div class="feature-copy">
+								<h3>Vadersentiment</h3>
+								<p>VADER Sentiment Analysis. VADER (Valence Aware Dictionary and sEntiment Reasoner) is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media, and works well on texts from other domains.</p>
+								<p><a href="https://github.com/cjhutto/vaderSentiment">Learn More</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-4">
+
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-wine"></i>
+							</span>
+							<div class="feature-copy">
+								<h3>tweepy</h3>
+								<p>An easy-to-use Python library for accessing the Twitter API. We use this package to access the tweets from twitter</p>
+								<p><a href="http://tweepy.readthedocs.io/en/v3.5.0/">Learn More</a></p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-md-4">
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-genius"></i>
+							</span>
+							<div class="feature-copy">
+								<h3>py2neo and Neo4j-driver</h3>
+								<p>Py2neo is a client library and toolkit for working with Neo4j from within Python applications and from the command line. </p>
+								<p><a href="https://py2neo.org/v4/">Learn More</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-chat"></i>
+							</span>
+							<div class="feature-copy">
+								<h3>NLTK data</h3>
+								<p>NLTK provides lot of examples and datasets in its data which can be downloaded and explored. We are using the data whiuch contains <b>stopwords</b></p>
+
+								<p><a href="https://www.nltk.org/data.html">Learn More</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<
+
+
+		<div class="fh5co-content-section">
+			<div class="container">
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+						<h3>Stages</h3>
+						<p>The project deals mainly with three stages.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+
+				<div class="row">
+					<div class="col-md-4">
+						<div class="fh5co-team text-center animate-box">
+							<figure>
+								<img src="images/researchicon.png" alt="user">
+							</figure>
+							<p>Research<br> <span class="text-mute"></span></p>
+							<blockquote>
+								<p>The Reasearch work can further be classified into searching for an ideal dataset and also learning the basics of Natural Language processing concepts and the functioning of the packages and API's. Also find the best and suitable package for our project and its requirements from the available options. </p>
+							</blockquote>
+
+
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="fh5co-team text-center animate-box">
+							<figure>
+								<img src="images/pythonicon.jpg" alt="user">
+							</figure>
+							<p>Development <br> <span class="text-mute">Python 2.7 using Pycharm</span></p>
+							<blockquote>
+								<p>The main and the most important stage when the requirements are met by cooking up a python recipie. The backend of our application which is responsible to accept the input from the usir from the UI and procure the tweets from twitter, process the tweets and finally create a Neo4j graph and return the results to the UI.</p>
+							</blockquote>
+
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="fh5co-team text-center animate-box">
+							<figure>
+								<img src="images/amazon.png" alt="user">
+							</figure>
+							<p>Deployment <br> <span class="text-mute">AWS Elastic Beanstalk‎</span></p>
+							<blockquote>
+								<p>The local machine Application is finally hosted on a web server for access from anywhere and to get rid of local processing and dependencies. We are using Amazon Ellastic Beanstacklk for this purpose which is really easy to setup and creates its own instance of EC2 for this purpose.</p>
+							</blockquote>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- fh5co-content-section -->
+
+		<div id="fh5co-services-section" class="fh5co-section-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+						<h3>Frameworks Used</h3>
+						<p> To make a local python program with command line interface to a full fledged web application on the web, we make use of some important frameworks which help us link the python program with the UI and server.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-4 col-sm-4">
+						<div class="service animate-box">
+							<span><i class="icon-beaker"></i></span>
+							<h3>Flask</h3>
+							<p>Flask is a microframework for Python based on Werkzeug, Jinja 2 and good intentions. It is the best available option compared to other options available in the market to deploy a simple web application using python.</p>
+							<p><a href="http://flask.pocoo.org/">Learn More</a></p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="service animate-box">
+							<span><i class="icon-heart"></i></span>
+							<h3>WSGI</h3>
+							<p>The Web Server Gateway Interface (WSGI) is a simple calling convention for web servers to forward requests to web applications or frameworks written in the Python programming language. The current version of WSGI, version 1.0.1, is specified in Python Enhancement Proposal</p>
+							<p><a href="https://wsgi.readthedocs.io/en/latest/">Learn More</a></p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="service animate-box">
+							<span><i class="icon-upload"></i></span>
+							<h3>AWSCLI</h3>
+							<p>The AWS Command Line Interface (CLI) is a unified tool to manage your AWS services. With just one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts. We use Awsebcli to create and setup an Elastic Beanstalk instance.</p>
+
+							<p><a href="https://www.w3.org/html/">Learn More</a></p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="service animate-box">
+							<span><i class="icon-globe"></i></span>
+							<h3>HTML (UI)</h3>
+							<p>Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications. With Cascading Style Sheets (CSS) and JavaScript, it forms a triad of cornerstone technologies for the World Wide Web. We use basic html to create an UI for the python application.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="service animate-box">
+							<span><i class="icon-bike"></i></span>
+							<h3>Github</h3>
+							<p>GitHub Inc. is a web-based hosting service for version control using Git. It is mostly used for computer code. It offers all of the distributed version control and source code management (SCM) functionality of Git as well as adding its own features. We are using this to host the frontend of the project</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="service animate-box">
+							<span><i class="icon-cloud"></i></span>
+							<h3>Neo4j Sandbox</h3>
+							<p>Neo4j sandbox is a very useful tool for exploring graphs and using them in small projects as demo. It is completely free and is created fro 3 days which can be further extended upto 7 days.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- END What we do -->
+
+
+		<div id="fh5co-blog-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+						<h3>Video Tutorials</h3>
+						<p>Before we start lets go through some of the basics.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row row-bottom-padded-md">
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="fh5co-blog animate-box">
+							<iframe width="352" height="198" src="https://www.youtube.com/embed/_D19h5s73Co" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<div class="blog-text">
+								<div class="prod-title">
+									<h3>Getting started with Neo4j</h3>
+
+									<p>In this tutorial you'll learn how to build a web app with Python. We'll use a micro-framework called Flask.</p>
+									<p><a href="https://neo4j.com/developer/get-started/">Learn More...</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="fh5co-blog animate-box">
+							<iframe width="352" height="198" src="https://www.youtube.com/embed/ZVGwqnjOKjk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<div class="blog-text">
+								<div class="prod-title">
+									<h3>Getting started with Flask</h3>
+
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p><a href="#">Learn More...</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix visible-sm-block"></div>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="fh5co-blog animate-box">
+							<iframe width="352" height="198" src="https://www.youtube.com/embed/rvxucBBDlPQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<div class="blog-text">
+								<div class="prod-title">
+									<h3><a href=""#>Getting started with Ellastic Beanstalk</a></h3>
+									<p>AWS Elastic Beanstalk reduces management complexity without restricting choice or control. You simply upload your application, and Elastic Beanstalk automatically handles the details of capacity provisioning, load balancing, scaling, and application health monitoring.</p>
+									<p><a href="#">Learn More...</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix visible-md-block"></div>
+				</div>
+
+
+					<div class="col-md-4 col-md-offset-4 text-center animate-box">
+
+						<a href="twsnlp.us-east-1.elasticbeanstalk.com/" class="btn btn-primary btn-lg">Get started</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- fh5co-blog-section -->
+		<footer>
+			<div id="footer">
+				<div class="container">
+					<div class="row row-bottom-padded-md">
+
+						<div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+							<h3>Company</h3>
+							<ul>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Our Team</a></li>
+								<li><a href="#">Contact Us</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Career</a></li>
+							</ul>
+						</div>
+						<div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+							<h3>Downloads</h3>
+							<ul>
+								<li><a href="https://www.python.org/downloads/release/python-2715/">Python 2.7</a></li>
+								<li><a href="https://neo4j.com/download/">Neo4j Desktop</a></li>
+								<li><a href="https://www.jetbrains.com/pycharm/download/">Python IDE Pycharm </a></li>
+							</ul>
+						</div>
+
+						<div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+							<h3>Connect</h3>
+							<ul>
+								<li><a href="https://twitter.com/IamHS11">Follow on Twitter</a></li>
+								<li><a href="harshith1.sheshan@gmail.com">Gmail</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 text-center">
+							<p class="fh5co-social-icons">
+								<a href="https://twitter.com/IamHS11"><i class="icon-twitter2"></i></a>
+								<a href="https://github.com/harshithsheshan/twitter-sentiment"><i class="icon-github"></i></a>
+
+							</p>
+							<p><a href="#">twitter sentiment analysis</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="https://github.com/" target="_blank">Harshith Sheshan</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+
+	</div>
+	<!-- END fh5co-page -->
+
+	</div>
+	<!-- END fh5co-wrapper -->
+
+	<!-- jQuery -->
+
+
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/sticky.js"></script>
+
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Superfish -->
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
