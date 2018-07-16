@@ -2,7 +2,7 @@
 By opening neo4j browser you can use cypher queries to access graph.On opening the link please click on the link "directly" as it is a shared graph
 
 Enter the following details to access the graph:
-host :https://10-0-1-175-34337.neo4jsandbox.com/
+host :bolt://ws-10-0-1-175-34336.neo4jsandbox.com:443
 
 Neo4j Graph USername: neo4j
 
@@ -40,4 +40,6 @@ match(n:word),(m:tweet)
 where n.tno=m.tno
 
 return n,m
+
+
 
