@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+
+	<head>
+	<meta charset="utf-8">
+	
+	<title>twitter sentiment analysis</title>
+    
+  	</head>
+  <body style="text-allign:center">
+      <div class="from_container">
+      	<div class="box">
+	      	<h1>Twitter sentiment analysis </h1>
+	      	<form action="/search" method="post" onsubmit="my_button_click_handler()">
+	        	<p>Search Query:<input type="text" name="search"></p>
+		        <p>start   date: <input type="number" name="sd"> month:<input type="number" name="sm"> year:<input type="number" name="sy"></p>
+		        <p>End     date: <input type="number" name="ed"> month:<input type="number" name="em"> year:<input type="number" name="ey"></p>
+		        <p>Maximum no of tweets to be analysed: <input type="number" name="m">(large numbers will take more time)</p>
+		        <p>NOTE  : The tweets are acessed from the present date backward.</p>
+		        <button type="submit" style="height: 75px; width: 150px">SUBMIT</button>
+	      	</form>
+    	</div>
+      </div>
+  </body>
+
+</html>
