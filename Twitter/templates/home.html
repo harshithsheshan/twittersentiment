@@ -1,26 +1,78 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./static/home.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js" ></script>
+        <style >
+        	button[type=submit]:enabled {
+    		background: #4278B4;
+    		font-color:#fff;
+		}
 
+			button[type=submit]:disabled {
+    		background: #E0E0E0;
+    		font-color:#fff;
+		}
+        </style>
+        <script>
+   
 
-	<head>
-	<meta charset="utf-8">
-	
-	<title>twitter sentiment analysis</title>
+		function myFunction() {
+		    var d = new Date();
+		    var n = d.getDate();
+		    document.getElementById("demo").innerHTML = n;
+		}
+		function verify()
+		{
+			if(document.getElementById("search").value!==null && if(document.getElementById("sd").value!==null) && if(document.getElementById("ed").value!==null) && if(document.getElementById("ed")!==null) && if(document.getElementById("m")!==null))
+			{
+				document.getElementById("sub").disabled=false;								
+			}
+		}
+		
+    </script>
+    <title>twitter sentiment</title>
+  </head>
+  <body>
     
-  	</head>
-  <body style="text-allign:center">
-      <div class="from_container">
-      	<div class="box">
-	      	<h1>Twitter sentiment analysis </h1>
-	      	<form action="/search" method="post" onsubmit="my_button_click_handler()">
-	        	<p>Search Query:<input type="text" name="search"></p>
-		        <p>start   date: <input type="number" name="sd"> month:<input type="number" name="sm"> year:<input type="number" name="sy"></p>
-		        <p>End     date: <input type="number" name="ed"> month:<input type="number" name="em"> year:<input type="number" name="ey"></p>
-		        <p>Maximum no of tweets to be analysed: <input type="number" name="m">(large numbers will take more time)</p>
-		        <p>NOTE  : The tweets are acessed from the present date backward.</p>
-		        <button type="submit" style="height: 75px; width: 150px">SUBMIT</button>
-	      	</form>
-    	</div>
-      </div>
+      <div class="bg-box">
+          <br>
+          <h1>Twitter sentiment analysis</h1>
+          
+          <img src="./static/Line.png" align="left" >
+          <br>
+          <form action="/search" method="post" id="f" name="theform" >
+          	<br>
+            <p>search query:</p>
+            <p><input type="text" align="left" name="search" id="search" oninput="verify()" style="color: black;" required></p>
+            
+            <br>
+            <p>start date: </p>
+           
+           <p><input type="date"  name="sd" min="2018-07-20" id="sd" max="2018-07-24"  oninput="verify()" style="color: black;" required></p>
+            <br>
+            
+            <p>End date:</p> 
+            
+            <p><input type="date" name="ed" required min="2018-07-20" max="2018-07-24" id= "ed" oninput="verify()" style="color: black;" required></p>
+            
+            <datalist>
+            <options id "demo"></options>
+            </datalist>
+            </span>
+            
+
+            <br>
+            <p>Maximum tweets to be analysed:</p>
+            
+            <p><input type="number" min="0" max="100" name="m" id="m" oninput="verify()" required style="color: black;"></p>
+            <br>
+            
+
+            <button type="submit" id="sub" text-color="white">SUBMIT</button>
+          </form>
+    </div>
   </body>
 
 </html>

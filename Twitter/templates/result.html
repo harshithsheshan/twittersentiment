@@ -2,79 +2,60 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./static/home.css">
     <title>result</title>
   </head>
   <body>
-    
-
-    <h1>Twitter sentiment analysis result </h1>
-        <p>Total number of tweets analysed :{{ntweets}}</p>
-        <p>Number of positive tweets :{{npos}} percentage :{{posperc}} </p>
-        <p>Number of negative tweets :{{nneg}} percentage :{{negperc}} </p>
-        <p>Number of neutral tweets  :{{nnut}} percentage :{{nutperc}} </p>
-        <br>
-    <h4>Steps to view graph</h4>
-
-        <ul><a href='https://10-0-1-175-34337.neo4jsandbox.com/'target="_blank"> Click Here to open Neo4j Browser</a></ul>
-        <ul><p>By opening neo4j browser you can use cypher queries to access graph.On opening the link please click on the link "directly" as it is a shared graph</p>
-        <ul>Enter the following details to access the graph:
-        
-        <li><p>host : bolt://ws-10-0-1-175-34336.neo4jsandbox.com:443/</p></li>
-        <li><p>Neo4j Graph Username:  neo4j</p></li>
-        <li><p>Password:  wheel-belt-town</p></li>
-        </ul></ul>
-        <ul> <h4>Example Cypher queries:</h4>
-          <li>To view all nodes
-            <b>
-              <p>match(n)</p>
-              <p>return(n)</p>
-            </b>
-          </li>
-          <li>To view all the words in the graph
-            <b>
-              <p>match(n:word)</p>
-              <p>return(n)</p>
-            </b>
-          </li>
-          <li>To view all the tweets in the graph
-            <b>
-              <p>match(n:word)</p>
-              <p>return(n)</p>
-            </b>
-          </li>
-          <li>To view all the categories(sentiment types) in the graph
-            <b>
-              <p>match(n:word)</p>
-              <p>return(n)</p>
-            </b>
-          </li>
-          <li>To view all the words and tweets in the graph
-            <b>
-              <p>match(n:word),(m:tweet)</p>
-              <p>return n,m</p>
-            </b>
-          </li>
-          <li>To view all the nodes with same tweet no(belong to the same tweet ) 
-            <b>
-            <p>match(n:word),(m:tweet)</p>
-            <p>where n.tno=m.tno</p>
-            <p>return n,m</p>
-            </b>
-          </li>
-            <li>To view all the tweets with relationship has to words. 
-            <b>
-            <p>match(n)-[r:has]->(m)</p>
-            <p>return n,r,m</p>
-            </b>
-          </li> 
-        </ul>
+ 
+    <div class="bg-box">
+      <br>
+      <h1 align="left">Result</h4>
       
+      <img src="./static/Line.png" align="left" > 
+      <br>
 
+          <script>
+            var pperc='{{posperc}}'
+            var nperc='{{negperc}}'
+            var nutperc='{{nutperc}}'
+          window.onload = function() {
 
-        
-        <!--<a href="file:///Users/Harshithsheshan/Desktop">open Json File location</a>
-        <script>window.open("/Users/Harshithsheshan/Desktop/output.json");</script>
-      -->
+          var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            data: [{
+              type: "pie",
+              startAngle: 240,
+              yValueFormatString: "##0.00\"%\"",
+              indexLabel: "{label} {y}",
+              dataPoints: [
+                {y: pperc, label: "Positive"},
+                {y: nperc, label: "Negative"},
+                {y: nutperc, label: "Neutral"},
+              ]
+            }]
+          });
+          chart.render();
+
+          }
+          </script>
+          <div id="chartContainer" style="height: 250px; width: 400px; padding-left: 80px"  >
+          </div>
+          <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+              
+          <p>host :</p>
+          <p style="opacity: 1.0"> <b>bolt://ws-10-0-1-175-34336.neo4jsandbox.com:443</b></p>
+          <p>Username :</p>
+          <p style="opacity: 1.0"><b>neo4j</b></h4>
+          <p>Password :</p>
+          <p style="opacity: 1.0"><b>wheel-belt-town<b></h4>
+          <br>
+          <a href="https://10-0-1-175-34337.neo4jsandbox.com/browser/" target="_blank">
+          <img src="./static/openbtn.png" style="height: 48px;  width: 412px; left: 0px">
+        </a>
+          <p >(click to open graph)</p>
+    
+    </div>
+       
   </body>
 </html>
 
